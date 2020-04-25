@@ -9,7 +9,7 @@
     </section>
 
     <section class="finish">
-      <transition name="vate">
+      <transition name="fade">
         <h4 v-if="show">Terima kasih telah memberikan penilaian anda</h4>
       </transition>
     </section>
@@ -37,6 +37,16 @@ export default {
 </script>
 
 <style type="text/css">
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;

@@ -36,8 +36,17 @@ section {
   width: 100%;
 }
 
+.give-your-vote {
+  font-size: 22px;
+}
+
 .emoticons {
   display: flex;
   justify-content: center;
+}
+
+.finish {
+  position: absolute;
+  bottom: 20px;
 }
 </style>

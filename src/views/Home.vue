@@ -4,12 +4,14 @@
       <h3 class="give-your-vote">Silahkan berikan penilaian anda terhadap pelayanan kami</h3>
 
       <div class="emoticons">
-        <Vote />
+        <Vote :voteProp="vote" />
       </div>
     </section>
 
     <section class="finish">
-      <h4>Terima kasih telah memberikan penilaian anda</h4>
+      <transition name="vate">
+        <h4 v-if="show">Terima kasih telah memberikan penilaian anda</h4>
+      </transition>
     </section>
   </div>
 </template>
@@ -20,7 +22,17 @@ import Vote from "@/components/Vote.vue";
 
 export default {
   name: "Home",
-  components: { Vote }
+  data: function() {
+    return {
+      show: false
+    };
+  },
+  components: { Vote },
+  methods: {
+    vote() {
+      this.show = true;
+    }
+  }
 };
 </script>
 
